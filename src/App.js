@@ -3,27 +3,31 @@ import Customer from "./features/customers/Customer";
 import AccountOperations from "./features/accounts/AccountOperations";
 import BalanceDisplay from "./features/accounts/BalanceDisplay";
 
-import store from "./store";
-import {deposit} from "./features/accounts/accountSlice";
-import {createCustomer} from "./features/customers/customerSlice";
 import CircleAnimation from "./features/CircleAnimation";
-
-store.dispatch(deposit(500))
-store.dispatch(createCustomer('Tome', 'Ko'))
-console.log(store.getState())
+import {useSelector} from "react-redux";
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 function App() {
+  const {fullName} = useSelector(store => store.customer);
   return (
-    <div>
+    <>
       <div className='header'>
         <CircleAnimation/>
         <h1>🏦 The React-Redux Bank ⚛️</h1>
-        <BalanceDisplay/>
       </div>
-      <CreateCustomer/>
-      <Customer/>
-      <AccountOperations/>
-    </div>
+      {/*{!fullName ?*/}
+        <CreateCustomer/>
+        {/*:*/}
+        <div className='mt-2'>
+          <BalanceDisplay/>
+          <Customer/>
+          <AccountOperations/>
+        </div>
+      {/*}*/}
+    </>
+
+
+
   );
 }
 

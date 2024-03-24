@@ -4,7 +4,8 @@ body {
   margin: 40px;
 }
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50px 1fr;
   justify-content: space-between;
   justify-items: center;
   align-items: center;
@@ -14,6 +15,8 @@ select {
   margin: 0 8px;
   padding: 4px 8px;
   font: inherit;
+  border: 1px solid #aaa;
+  width: 110px;
 }
 
 button {
@@ -21,6 +24,11 @@ button {
   font-weight: bold;
   padding: 6px 8px;
   cursor: pointer;
+  background: linear-gradient(to right, blueviolet, green);
+  border-radius: 10px;
+  border: none;
+  color: #61dafb;
+  margin-left: 10px;
 }
 
 .inputs {
@@ -37,10 +45,10 @@ button {
   /*top: 40px;*/
   /*right: 40px;*/
   background-color: #f7f7f7;
-  padding: 24px 32px;
+  padding: 10px 10px;
   font-weight: bold;
-  font-size: 32px;
-  min-width: 180px;
+  font-size: 20px;
+  min-width: 100px;
   text-align: center;
 }
 

@@ -1,5 +1,8 @@
 .container {
    position: relative;
+   /*display: flex;*/
+   /*flex-direction: column;*/
+   /*justify-content: center;*/
    display: grid;
    height:50px;
    width: 50px;
