@@ -15,19 +15,16 @@ function App() {
         <CircleAnimation/>
         <h1>🏦 The React-Redux Bank ⚛️</h1>
       </div>
-      {/*{!fullName ?*/}
+      {!fullName ?
         <CreateCustomer/>
-        {/*:*/}
+        :
         <div className='mt-2'>
           <BalanceDisplay/>
           <Customer/>
           <AccountOperations/>
         </div>
-      {/*}*/}
+      }
     </>
-
-
-
   );
 }
 
